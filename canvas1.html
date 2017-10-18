@@ -6,19 +6,21 @@
 </head>
 
 <body>
-<canvas id="c" width="200" height="200"></canvas>
+<canvas id="c" width="500" height="500"></canvas>
 <script>
 var c=document.querySelector('#c');
 var ctx=c.getContext("2d");
-var image = new Image();
+ctx.fillRect(100,100,100,100);
+ctx.strokeRect(50,50,50,50);
+/*var image = new Image();
 image.onload = function()
 {
 	console.log("Loaded Image");
 	ctx.drawImage(image,0,0,c.width,c.height);
 	var savedImage = c.toDataURL();
 	window.open(savedImage);
-}
-image.src="html.jpg";
+}*/
+//image.src="html.jpg";
 </script>
 </body>
 </html>
