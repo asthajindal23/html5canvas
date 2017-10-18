@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<canvas id ="c" width="500" height="500"></canvas>
+<script>
+var c= document.querySelector('#c');
+var ctx=c.getContext("2d");
+
+ctx.save();
+ctx.fillStyle = 'blue';
+/*------translate(x,y) moves all subsequent draw commands by x number of pixels on horizontally and y pixels vertically.----*/
+ctx.translate(10,10);
+ctx.fillRect(0,0,10,10);
+ctx.restore();
+
+
+ctx.rotate(Math.PI/4);
+ctx.translate(50,0);
+ctx.fillStyle = 'green';
+ctx.fillRect(0,0, 10,10);
+
+/*  --------------ctx.rotate(angleRadians) rotates an object a certain number of radians (generally) about its center. 
+You may have learned about radians in school but here's a handy formula to convert a value from degrees to radians.
+
+radians = degrees * (Math.PI/180)------------*/
+</script>
+</body>
+</html>
